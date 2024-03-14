@@ -17,10 +17,11 @@ jabber.close()
 # PEP 343 introduced the `with` statement, for working with things like files.
 
 with open("Jabberwocky.txt","r") as jabber:
-    for line in jabber:
+    for line in jabber:  #in here every element of a txt file is a string that contains one line of our file
         print(line,end="")
         print(len(line))
 
+print(type(line))
 # Because with is a statement, not a function, we don't get a file object returned.
 # Instead, we use "as jabber" to give a name to the file object.
 # Opening a file this way is preferred, because the file will be automatically closed when the with block terminates.
